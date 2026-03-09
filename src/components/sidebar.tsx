@@ -26,7 +26,7 @@ const navItems = [
   { label: "Supplements", href: "/supplements", icon: Pill },
   { label: "Meals", href: "/meals", icon: UtensilsCrossed },
   { label: "Gym Log", href: "/gym", icon: Dumbbell },
-  { label: "Mood Graph", href: "/mood", icon: LineChart },
+  { label: "Mood Graph", href: "/mood-graph", icon: LineChart },
   { label: "Notes", href: "/notes", icon: StickyNote },
   { label: "Weekly Review", href: "/review", icon: CalendarCheck },
   { label: "Schedule", href: "/schedule", icon: Calendar },
