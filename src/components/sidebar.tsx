@@ -22,7 +22,7 @@ import {
 
 const navItems = [
   { label: "Dashboard", href: "/", icon: LayoutDashboard },
-  { label: "Daily Check-in", href: "/checkin", icon: ClipboardCheck },
+  { label: "Daily Check-in", href: "/daily-checkin", icon: ClipboardCheck },
   { label: "Supplements", href: "/supplements", icon: Pill },
   { label: "Meals", href: "/meals", icon: UtensilsCrossed },
   { label: "Gym Log", href: "/gym", icon: Dumbbell },

@@ -1,18 +1,16 @@
 // ──── Daily Check-in ────
 export interface DailyCheckin {
-  date: string; // ISO date string YYYY-MM-DD
-  anxiety: number; // 0-10
-  depression: number; // 0-10
-  dpdr: number; // 0-10
-  panicAttacks: number; // count
-  panicIntensity: number; // 0-10
-  nonNegotiables: {
-    meditation: boolean;
-    exercise: boolean;
-    journaling: boolean;
-    sleep8h: boolean;
-    noAlcohol: boolean;
-  };
+  date: string; // YYYY-MM-DD
+  anxiety: number; // 1-10
+  depression: number; // 1-10
+  dpdr: number; // 1-10
+  panicCount: number; // 0-20
+  panicIntensity: number; // 1-10
+  nonNegotiables: number; // 0-5
+  gym: boolean;
+  nicotine: number; // count
+  gamblingUrge: boolean;
+  gamblingActed: boolean;
 }
 
 // ──── Supplements ────
