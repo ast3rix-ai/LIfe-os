@@ -14,15 +14,18 @@ export interface DailyCheckin {
 }
 
 // ──── Supplements ────
+export type SupplementTimeBlock = "morning" | "lunch" | "evening" | "bedtime";
+
 export interface SupplementItem {
   name: string;
   taken: boolean;
-  time: string; // HH:mm
+  timeBlock: SupplementTimeBlock;
 }
 
 export interface SupplementLog {
   date: string;
   items: SupplementItem[];
+  completionRate: number;
 }
 
 // ──── Meals ────
