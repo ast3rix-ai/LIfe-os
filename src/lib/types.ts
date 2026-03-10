@@ -46,6 +46,8 @@ export interface GymSet {
 
 export interface GymExercise {
   name: string;
+  targetSets: number;
+  targetReps: string; // "10-12"
   sets: GymSet[];
 }
 
