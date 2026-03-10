@@ -49,7 +49,7 @@ function MiniSpark({ data, color }: MiniSparkProps) {
             fontSize: 11,
           }}
           labelStyle={{ display: "none" }}
-          formatter={(val: number) => [val, ""]}
+          formatter={(val: any) => [val, ""]}
         />
       </LineChart>
     </ResponsiveContainer>

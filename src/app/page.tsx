@@ -108,11 +108,7 @@ export default function DashboardPage() {
   }, [checkins]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="max-w-4xl mx-auto space-y-5"
-    >
+    <div className="max-w-4xl mx-auto space-y-5">
       {/* Header */}
       <div className="flex items-center gap-3">
         <LayoutDashboard className="w-6 h-6 text-[#E94560]" />
@@ -152,6 +148,6 @@ export default function DashboardPage() {
 
       {/* Motivational Quote */}
       <MotivationalQuote />
-    </motion.div>
+    </div>
   );
 }

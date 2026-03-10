@@ -28,11 +28,7 @@ export default function MoodGraphPage() {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="space-y-5"
-    >
+    <div className="max-w-4xl mx-auto space-y-5">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex items-center gap-3">
@@ -70,6 +66,6 @@ export default function MoodGraphPage() {
         <NonNegotiablesRing checkins={checkins} />
         <NicotineTrendChart checkins={checkins} />
       </div>
-    </motion.div>
+    </div>
   );
 }

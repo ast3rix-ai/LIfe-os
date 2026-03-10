@@ -190,11 +190,7 @@ export default function NotesPage() {
   const selected = notes.find((n) => n.id === selectedId) ?? null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="h-[calc(100vh-120px)]"
-    >
+    <div className="h-[calc(100vh-120px)] max-w-7xl mx-auto">
       {/* Header */}
       <div className="flex items-center gap-3 mb-5">
         <StickyNote className="w-6 h-6 text-[#E94560]" />
@@ -231,6 +227,6 @@ export default function NotesPage() {
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

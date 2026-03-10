@@ -66,8 +66,8 @@ export function clearAllStorage(): void {
   const keys: (keyof StorageDataMap)[] = [
     "daily-checkins",
     "supplements",
-    "meals",
-    "gym",
+    "meal-logs",
+    "gym-sessions",
     "nicotine",
     "notes",
     "weekly-reviews",

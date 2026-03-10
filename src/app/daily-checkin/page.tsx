@@ -79,11 +79,7 @@ export default function DailyCheckinPage() {
   const isTodayDate = isToday(parsedDate);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="max-w-2xl mx-auto space-y-5"
-    >
+    <div className="max-w-2xl mx-auto space-y-5">
       {/* Header with date nav */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -235,6 +231,6 @@ export default function DailyCheckinPage() {
 
       {/* Sparkline */}
       <CheckinSparkline checkins={allCheckins} />
-    </motion.div>
+    </div>
   );
 }

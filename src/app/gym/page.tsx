@@ -94,11 +94,7 @@ export default function GymLogPage() {
   }, [session, today, selectedDay]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="max-w-2xl mx-auto space-y-5"
-    >
+    <div className="max-w-2xl mx-auto space-y-5">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -147,6 +143,6 @@ export default function GymLogPage() {
         <Save className="w-4 h-4" />
         {saved ? "Saved ✓" : "Save Session"}
       </motion.button>
-    </motion.div>
+    </div>
   );
 }

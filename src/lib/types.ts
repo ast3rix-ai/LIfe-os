@@ -99,8 +99,8 @@ export type GymTemplate = Record<GymDay, Omit<GymExercise, "sets">[]>;
 export type StorageKey =
   | "daily-checkins"
   | "supplements"
-  | "meals"
-  | "gym"
+  | "meal-logs"
+  | "gym-sessions"
   | "nicotine"
   | "notes"
   | "weekly-reviews";
@@ -109,8 +109,8 @@ export type StorageKey =
 export interface StorageDataMap {
   "daily-checkins": DailyCheckin[];
   supplements: SupplementLog[];
-  meals: MealLog[];
-  gym: GymSession[];
+  "meal-logs": MealLog[];
+  "gym-sessions": GymSession[];
   nicotine: NicotineLog[];
   notes: Note[];
   "weekly-reviews": WeeklyReview[];

@@ -116,11 +116,7 @@ export default function SupplementsPage() {
   const streak = calcStreak(allLogs, currentDate);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="max-w-2xl mx-auto space-y-5"
-    >
+    <div className="max-w-2xl mx-auto space-y-5">
       {/* Header */}
       <div className="flex items-center gap-3">
         <Pill className="w-6 h-6 text-[#E94560]" />
@@ -184,6 +180,6 @@ export default function SupplementsPage() {
 
       {/* Weekly Heatmap */}
       <WeeklyHeatmap logs={allLogs} currentDate={currentDate} />
-    </motion.div>
+    </div>
   );
 }

@@ -46,7 +46,7 @@ export function OverloadChart({ exerciseName, sessions }: OverloadChartProps) {
             }}
             itemStyle={{ color: "#E6EDF3" }}
             labelStyle={{ color: "#8B949E" }}
-            formatter={(v: number) => [`${v} kg`, "Weight"]}
+            formatter={(v: any) => [`${v} kg`, "Weight"]}
           />
           <Line
             type="monotone"

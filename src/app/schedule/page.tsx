@@ -14,11 +14,7 @@ export default function SchedulePage() {
   const [mode, setMode] = useState<Mode>("standard");
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="max-w-2xl mx-auto space-y-5"
-    >
+    <div className="max-w-2xl mx-auto space-y-5">
       {/* Header */}
       <div className="flex items-center gap-3">
         <CalendarClock className="w-6 h-6 text-[#E94560]" />
@@ -64,6 +60,6 @@ export default function SchedulePage() {
 
       {/* Weekly Gym Split */}
       <WeeklyGymView />
-    </motion.div>
+    </div>
   );
 }

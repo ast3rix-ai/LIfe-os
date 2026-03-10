@@ -9,11 +9,7 @@ import { SettingsGymEditor } from "@/components/settings/gym-editor";
 
 export default function SettingsPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="max-w-2xl mx-auto space-y-6 pb-20"
-    >
+    <div className="max-w-2xl mx-auto space-y-6 pb-20">
       <div className="flex items-center gap-3 mb-6">
         <Settings className="w-6 h-6 text-[#E94560]" />
         <h2 className="text-xl font-bold text-[#E6EDF3]">Settings</h2>
@@ -34,6 +30,6 @@ export default function SettingsPage() {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
