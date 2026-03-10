@@ -78,9 +78,11 @@ export interface NicotineLog {
 // ──── Notes ────
 export interface Note {
   id: string;
-  date: string;
   title: string;
   content: string;
+  createdAt: string;
+  updatedAt: string;
+  pinned: boolean;
 }
 
 // ──── Weekly Review ────
