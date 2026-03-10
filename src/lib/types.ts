@@ -91,6 +91,10 @@ export interface WeeklyReview {
   answers: string[];
 }
 
+// ──── Templates ────
+export type SupplementTemplate = { name: string; timeBlock: SupplementTimeBlock }[];
+export type GymTemplate = Record<GymDay, Omit<GymExercise, "sets">[]>;
+
 // ──── Storage Keys ────
 export type StorageKey =
   | "daily-checkins"
@@ -110,6 +114,9 @@ export interface StorageDataMap {
   nicotine: NicotineLog[];
   notes: Note[];
   "weekly-reviews": WeeklyReview[];
+  "supplement-template": SupplementTemplate;
+  "gym-template": GymTemplate;
+  "theme": "dark" | "light";
 }
 
 // ──── Navigation ────

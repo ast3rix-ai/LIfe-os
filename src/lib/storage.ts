@@ -4,7 +4,7 @@ import type { StorageDataMap, StorageKey } from "./types";
 
 // ──── Core Storage Functions ────
 
-export function getStorageItem<K extends StorageKey>(
+export function getStorageItem<K extends keyof StorageDataMap>(
   key: K
 ): StorageDataMap[K] {
   if (typeof window === "undefined") {
@@ -19,7 +19,7 @@ export function getStorageItem<K extends StorageKey>(
   }
 }
 
-export function setStorageItem<K extends StorageKey>(
+export function setStorageItem<K extends keyof StorageDataMap>(
   key: K,
   value: StorageDataMap[K]
 ): void {
@@ -63,7 +63,7 @@ export function removeStorageItem(key: StorageKey): void {
 
 export function clearAllStorage(): void {
   if (typeof window === "undefined") return;
-  const keys: StorageKey[] = [
+  const keys: (keyof StorageDataMap)[] = [
     "daily-checkins",
     "supplements",
     "meals",
@@ -71,6 +71,9 @@ export function clearAllStorage(): void {
     "nicotine",
     "notes",
     "weekly-reviews",
+    "supplement-template",
+    "gym-template",
+    "theme",
   ];
   keys.forEach((key) => localStorage.removeItem(key));
 }

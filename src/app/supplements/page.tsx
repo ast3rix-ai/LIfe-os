@@ -5,28 +5,13 @@ import { format, addDays, subDays, isToday, parseISO } from "date-fns";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Pill } from "lucide-react";
 import { getStorageItem, setStorageItem } from "@/lib/storage";
-import type { SupplementLog, SupplementItem, SupplementTimeBlock } from "@/lib/types";
+import type { SupplementLog, SupplementTimeBlock } from "@/lib/types";
+import { getSupplementTemplate } from "@/lib/templates";
 import { TimeBlockCard } from "@/components/supplements/time-block-card";
 import { SupplementProgress } from "@/components/supplements/supplement-progress";
 import { WeeklyHeatmap } from "@/components/supplements/weekly-heatmap";
 
-// ──── Default supplement schedule ────
-const DEFAULT_SUPPLEMENTS: { name: string; timeBlock: SupplementTimeBlock }[] = [
-  { name: "Vitamin D3 5000IU + K2", timeBlock: "morning" },
-  { name: "Omega-3 (dose 1)", timeBlock: "morning" },
-  { name: "NAC 1200mg", timeBlock: "morning" },
-  { name: "L-Theanine 200mg", timeBlock: "morning" },
-  { name: "Creatine 5g", timeBlock: "morning" },
-  { name: "Lion's Mane 500mg", timeBlock: "morning" },
-  { name: "Omega-3 (dose 2)", timeBlock: "lunch" },
-  { name: "Lion's Mane 500mg", timeBlock: "lunch" },
-  { name: "Zinc 25mg", timeBlock: "evening" },
-  { name: "Elicea 2.5mg", timeBlock: "evening" },
-  { name: "NAC 1200mg", timeBlock: "evening" },
-  { name: "Melatonin 0.5mg", timeBlock: "bedtime" },
-  { name: "Magnesium 400mg", timeBlock: "bedtime" },
-  { name: "Glycine 3g", timeBlock: "bedtime" },
-];
+// Imported from lib/templates
 
 const TIME_BLOCKS: {
   key: SupplementTimeBlock;
@@ -40,9 +25,10 @@ const TIME_BLOCKS: {
 ];
 
 function createEmptyLog(date: string): SupplementLog {
+  const template = getSupplementTemplate();
   return {
     date,
-    items: DEFAULT_SUPPLEMENTS.map((s) => ({
+    items: template.map((s) => ({
       name: s.name,
       taken: false,
       timeBlock: s.timeBlock,
