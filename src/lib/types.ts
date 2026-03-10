@@ -29,13 +29,21 @@ export interface SupplementLog {
 }
 
 // ──── Meals ────
+export interface MealEntry {
+  eaten: boolean;
+  note?: string;
+}
+
+export type MealKey = "breakfast" | "snack1" | "lunch" | "snack2" | "dinner";
+
 export interface MealLog {
   date: string;
-  breakfast: string;
-  snack1: string;
-  lunch: string;
-  snack2: string;
-  dinner: string;
+  breakfast: MealEntry;
+  snack1: MealEntry;
+  lunch: MealEntry;
+  snack2: MealEntry;
+  dinner: MealEntry;
+  totalMeals: number;
 }
 
 // ──── Gym ────
